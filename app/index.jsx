@@ -30,7 +30,7 @@ export default function App() {
               resizeMode="contain"
             />
           </View>
-          <Text className="text-sm font-pregular text-gray-100 mt-7 text-center">
+          <Text className="text-xs font-pregular text-gray-100 mt-7 text-center">
             Where Creativity Meets Innovation: embark on a journey of limitless
             exploration with Aora
           </Text>
