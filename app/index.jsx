@@ -2,9 +2,15 @@ import { StatusBar } from "expo-status-bar";
 import { ScrollView, Text, View, Image } from "react-native";
 import { Redirect, router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
+import "react-native-url-polyfill/auto";
 import { images } from "../constants";
 import CustomButton from "../components/CustomButton";
+import { useGlobalContext } from "../context/GlobalProvider";
 export default function App() {
+  const { isLoading, isLoggedIn } = useGlobalContext();
+
+  if (!isLoading && isLoggedIn) return <Redirect href={"/home"} />;
+
   return (
     <SafeAreaView className="bg-primary h-full">
       <ScrollView className="" contentContainerStyle={{ height: "100%" }}>
@@ -30,7 +36,7 @@ export default function App() {
               resizeMode="contain"
             />
           </View>
-          <Text className="text-xs font-pregular text-gray-100 mt-7 text-center">
+          <Text className="text-xs font-pregular text-gray-100 mt-7 text-center max-w-[90%]">
             Where Creativity Meets Innovation: embark on a journey of limitless
             exploration with Aora
           </Text>

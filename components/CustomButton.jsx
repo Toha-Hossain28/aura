@@ -17,7 +17,9 @@ const CustomButton = ({
       }`}
       disabled={isLoading}
     >
-      <Text className={`text-primary font-psemibold text-base ${textStyles}`}>
+      <Text
+        className={`text-primary font-psemibold text-base ${textStyles} max-w-[90%]`}
+      >
         {title}
       </Text>
     </TouchableOpacity>
