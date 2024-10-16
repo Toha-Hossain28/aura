@@ -7,3 +7,5 @@
 `npx expo install expo-font`
 Appwrite
 `npx expo install react-native-appwrite react-native-url-polyfill`
+Animation
+`npm install react-native-animatable expo-av`
